@@ -9,12 +9,11 @@ def add_product(cursor):
     weight = float(input("Enter product weight: "))
     stock_shipment = int(input("Enter stock shipment quantity: "))
     stock_remaining = int(input("Enter stock remaining quantity: "))
-    category = input("Enter product category: ")
     
     cursor.execute('''
         INSERT INTO products (barcode, name, price, expiry_date, size, weight, stock_shipment, stock_remaining)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    ''', (barcode, name, price, expiry_date, size, weight, stock_shipment, stock_remaining,category))
+    ''', (barcode, name, price, expiry_date, size, weight, stock_shipment, stock_remaining))
 
     print("Product added successfully!")
 
