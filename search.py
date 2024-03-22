@@ -26,7 +26,7 @@ class BarcodeApp:
         self.entry.focus_set()
 
         # Connect to SQLite database
-        self.conn = sqlite3.connect('test.db')
+        self.conn = sqlite3.connect('../test.db')
         self.cursor = self.conn.cursor()
 
         # Bind Enter key to trigger search

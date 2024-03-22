@@ -1,0 +1,1 @@
+text= "8710428016492   ensure strawberry 400 gm"

@@ -7,7 +7,13 @@ cursor = conn.cursor()
 # Add category column to the products table
 cursor.execute('''
     ALTER TABLE products
-    ADD COLUMN category TEXT
+    ALTER COLUMN price DROP NOT NULL,
+    ALTER COLUMN expiry_date DROP NOT NULL,
+    ALTER COLUMN size DROP NOT NULL,
+    ALTER COLUMN weight DROP NOT NULL,
+    ALTER COLUMN stock_shipment DROP NOT NULL,
+    ALTER COLUMN stock_remaining DROP NOT NULL,
+    ALTER COLUMN category DROP NOT NULL
 ''')
 
 # Commit the transaction to save changes
